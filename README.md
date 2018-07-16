@@ -13,9 +13,12 @@
   <a href="https://github.com/trazyn/alfred-ieasemusic"><img src="https://img.shields.io/github/license/trazyn/alfred-ieasemusic.svg?style=flat-square"></a>
 </p>
 
-## Preview
-![Mneu](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/menu.png?raw=true)
-![Playlist](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true)
+<p align="center">
+<span>
+<img src="https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/menu.png?raw=true"/>
+<img src="https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true" />
+</span>
+</p>
 
 
 ## Feature
@@ -34,6 +37,7 @@ Last version: [v1.0.0](https://github.com/trazyn/alfred-ieasemusic/releases/late
 2. Open `alfred-ieasemusic.alfredworkflow` in the Fidner, double-clicking it or drag to into Alfred.
 3. Double-click the first thingy marked `Hotkey`.
 4. Click the textfiled labeled `Hotkey` and press `⌥⌘.`(Any hotkeys as you wish).
+  ![Playlist](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true)
 5. Click `Save`.
 
 
