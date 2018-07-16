@@ -1,6 +1,7 @@
 
 # -*- coding: UTF-8 -*-
 
+import sys
 import socket
 import json
 import pinyin
@@ -32,13 +33,13 @@ class Controller:
         self.wf = wf
         try:
             status = self.__getStatus()
-        except Exception as e:
-            print e
+        except Exception:
             wf.add_item(
                 title='Player is not runing...',
                 subtitle='Please start ieasemusic or update to new version.'
             )
             wf.send_feedback()
+            sys.exit(0)
 
     def __formatArtists(self, artists):
         artists = artists.values() if not isinstance(
