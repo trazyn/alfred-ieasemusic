@@ -34,7 +34,6 @@ Last version: [v1.0.0](https://github.com/trazyn/alfred-ieasemusic/releases/late
 2. Open `alfred-ieasemusic.alfredworkflow` in the Fidner, double-clicking it or drag to into Alfred.
 3. Double-click the first thingy marked `Hotkey`.
 4. Click the textfiled labeled `Hotkey` and press `⌥⌘.`(Any hotkeys as you wish).
-  ![Playlist](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true)
 5. Click `Save`.
 
 
