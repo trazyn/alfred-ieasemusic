@@ -17,4 +17,29 @@
 ![Mneu](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/menu.png?raw=true)
 ![Playlist](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true)
 
-Checkout the [sketch file](https://github.com/trazyn/JJJkkk/tree/master/resources) or [full previews](https://github.com/trazyn/JJJkkk/tree/master/resources/previews)
+
+## Feature
+- Alfred like.
+- Hotkeys, Full support of Alfred hotkeys.
+- Easy to control your [ieaseMusic](https://github.com/trazyn/ieaseMusic).
+
+## Required
+- [Alfred 3](https://www.alfredapp.com/)
+- [IeaseMusic v1.2.6+](https://github.com/trazyn/ieaseMusic/releases/latest)
+
+## Install
+Last version: [v1.0.0](https://github.com/trazyn/alfred-ieasemusic/releases/latest)
+
+1. Downlaod [alfred-ieasemusic.alfredworkflow](https://github.com/trazyn/alfred-ieasemusic/releases/latest).
+2. Open `alfred-ieasemusic.alfredworkflow` in the Fidner, double-clicking it or drag to into Alfred.
+3. Double-click the first thingy marked `Hotkey`.
+4. Click the textfiled labeled `Hotkey` and press `⌥⌘.`(Any hotkeys as you wish).
+  ![Playlist](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/playlist.png?raw=true)
+5. Click `Save`.
+
+
+## How to use
+Just press `⌥⌘.`(Your hotkeys binding).
+
+## License
+`MIT` see [LICENSE](https://github.com/trazyn/alfred-ieasemusic/blob/master/LICENSE)
