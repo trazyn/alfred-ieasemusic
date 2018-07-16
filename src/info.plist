@@ -6,6 +6,32 @@
 	<string>gh.trazyn.ieasemusic.alfred</string>
 	<key>connections</key>
 	<dict>
+		<key>36A8C05C-3C0B-4ADD-AE0B-9125A25F3441</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B292DF89-5BB2-408F-8F12-646E5D433D57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>67D1E431-D28E-4F69-B9F3-1980D62241E3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A13AC33F-B97F-4127-834A-EC54CD7EDC4A</key>
 		<array>
 			<dict>
@@ -19,11 +45,34 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</key>
+		<key>B292DF89-5BB2-408F-8F12-646E5D433D57</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>67D1E431-D28E-4F69-B9F3-1980D62241E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>36A8C05C-3C0B-4ADD-AE0B-9125A25F3441</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -43,53 +92,6 @@
 	<string>ieaseMusic Controller</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>mm</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>1</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python ieasemusic.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Controller for ieaseMusic</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -115,6 +117,25 @@ Controller.exe(sys.argv[1])</string>
 			<string>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>67D1E431-D28E-4F69-B9F3-1980D62241E3</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -147,11 +168,142 @@ Controller.exe(sys.argv[1])</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys
+from workflow import Workflow3
+from ieasemusic import Controller
+
+Controller(Workflow3()).showMenu()</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Show menu</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys
+from workflow import Workflow3
+from ieasemusic import Controller
+
+sys.exit(Controller(Workflow3()).showPlaylist())</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Show playlist</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B292DF89-5BB2-408F-8F12-646E5D433D57</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>36A8C05C-3C0B-4ADD-AE0B-9125A25F3441</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>36A8C05C-3C0B-4ADD-AE0B-9125A25F3441</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
+		<key>67D1E431-D28E-4F69-B9F3-1980D62241E3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
 		<key>A13AC33F-B97F-4127-834A-EC54CD7EDC4A</key>
 		<dict>
 			<key>xpos</key>
@@ -159,12 +311,19 @@ Controller.exe(sys.argv[1])</string>
 			<key>ypos</key>
 			<integer>170</integer>
 		</dict>
+		<key>B292DF89-5BB2-408F-8F12-646E5D433D57</key>
+		<dict>
+			<key>xpos</key>
+			<integer>710</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
 		<key>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>900</integer>
 			<key>ypos</key>
-			<integer>170</integer>
+			<integer>40</integer>
 		</dict>
 		<key>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</key>
 		<dict>

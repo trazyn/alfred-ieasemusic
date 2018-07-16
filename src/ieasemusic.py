@@ -1,7 +1,6 @@
 
 # -*- coding: UTF-8 -*-
 
-import sys
 import socket
 import json
 import pinyin
@@ -62,6 +61,10 @@ class Controller:
         data = flush(s)
         return json.loads(data)
 
+    def __getQuery(self):
+        wf = self.wf
+        return (wf.args[0] if len(wf.args) else '').strip()
+
     def __out(self, res):
         for v in res:
             self.wf.add_item(**v)
@@ -93,6 +96,11 @@ class Controller:
                 'valid': True,
                 'arg': json.dumps({'command': 'prev'}),
                 'icon': './images/rewind.png'
+            },
+            {
+                'title': 'Show playlist.',
+                'valid': True,
+                'icon': './images/pig.png'
             },
             {
                 'title': 'Toggle the mian window.',
@@ -139,23 +147,25 @@ class Controller:
         )
 
     def showPlaylist(self):
-        res = self.getPlaylist('')
+        query = self.__getQuery()
+        res = self.getPlaylist(query)
         self.__out(res)
 
     def showMenu(self):
-        wf = self.wf
-        query = (wf.args[0] if len(wf.args) else '').strip()
+        query = self.__getQuery()
+        res = self.getPlaying()
 
         if query:
-            res = self.getPlaylist(query)
-        else:
-            res = self.getPlaying()
+            res = [
+                i for i in res
+                if pinyin.get(
+                    i['title'],
+                    format='strip',
+                    delimiter=''
+                ).lower().find(query) != -1
+            ]
 
         self.__out(res)
-
-    @staticmethod
-    def wtf(argv):
-        print argv
 
     @staticmethod
     def exe(argv):
