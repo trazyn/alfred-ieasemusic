@@ -85,7 +85,7 @@
 	<key>createdby</key>
 	<string>var.darling@gmail.com</string>
 	<key>description</key>
-	<string>Alfred 3 workflow to controller ieasemusic v0.0.1</string>
+	<string>Alfred 3 workflow to controller ieasemusic v1.0.0</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -186,7 +186,7 @@ Controller.exe(sys.argv[1])</string>
 				<key>queuedelayimmediatelyinitially</key>
 				<true/>
 				<key>queuedelaymode</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>
@@ -235,7 +235,7 @@ Controller(Workflow3()).showMenu()</string>
 				<key>queuedelayimmediatelyinitially</key>
 				<true/>
 				<key>queuedelaymode</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>
