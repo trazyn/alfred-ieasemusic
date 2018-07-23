@@ -101,7 +101,14 @@ class Controller:
             {
                 'title': 'Show playlist.',
                 'valid': True,
+                'arg': '--show-playlist',
                 'icon': './images/pig.png'
+            },
+            {
+                'title': 'Change mode.',
+                'valid': True,
+                'arg': '--change-mode',
+                'icon': './images/koala.png'
             },
             {
                 'title': 'Toggle the mian window.',
@@ -166,6 +173,25 @@ class Controller:
                 ).lower().find(query) != -1
             ]
 
+        self.__out(res)
+
+    def showModes(self):
+        modes = status['modes']
+        names = ('Shuffle.', 'Repeat.', 'Repeat One.')
+        icons = ('./images/twisted_rightwards_arrows.png', './images/repeat_one.png', './images/repeat.png') # noqa
+
+        res = map(
+            lambda v: (
+                {
+                    'title': names[v['mode']],
+                    'subtitle': 'Enabled' if v['enabled'] == 1 else 'Disabled',
+                    'icon': icons[v['mode']],
+                    'arg': json.dumps({'command': 'changeMode', 'mode': v['mode']}), # noqa
+                    'valid': True
+                }
+            ),
+            modes
+        )
         self.__out(res)
 
     @staticmethod

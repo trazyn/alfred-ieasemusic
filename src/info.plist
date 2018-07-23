@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B292DF89-5BB2-408F-8F12-646E5D433D57</string>
+				<string>DD25762D-DC18-4930-AAA6-83101EBF3857</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -58,11 +58,34 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CA0976F8-D2A2-4F24-BA2E-64DFC8CB1BF6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E454C501-1951-45EE-BB39-F13A6625E439</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>67D1E431-D28E-4F69-B9F3-1980D62241E3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA0976F8-D2A2-4F24-BA2E-64DFC8CB1BF6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -81,11 +104,50 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DD25762D-DC18-4930-AAA6-83101EBF3857</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B292DF89-5BB2-408F-8F12-646E5D433D57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E454C501-1951-45EE-BB39-F13A6625E439</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EB6F4AFF-FD4F-4FB6-8BD9-88B460FC953F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EB6F4AFF-FD4F-4FB6-8BD9-88B460FC953F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>var.darling@gmail.com</string>
 	<key>description</key>
-	<string>Alfred 3 workflow to controller ieasemusic v1.0.0</string>
+	<string>Alfred 3 workflow to controller ieasemusic v1.0.3</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -126,9 +188,9 @@ Controller.exe(sys.argv[1])</string>
 				<key>matchcasesensitive</key>
 				<false/>
 				<key>matchmode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>matchstring</key>
-				<string></string>
+				<string>command</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
@@ -262,6 +324,91 @@ sys.exit(Controller(Workflow3()).showPlaylist())</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
+			<string>EB6F4AFF-FD4F-4FB6-8BD9-88B460FC953F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>E454C501-1951-45EE-BB39-F13A6625E439</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>--show-playlist</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>CA0976F8-D2A2-4F24-BA2E-64DFC8CB1BF6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import sys
+from workflow import Workflow3
+from ieasemusic import Controller
+
+sys.exit(Controller(Workflow3()).showModes())</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Show modes</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
 			<string>B292DF89-5BB2-408F-8F12-646E5D433D57</string>
 			<key>version</key>
 			<integer>2</integer>
@@ -276,12 +423,29 @@ sys.exit(Controller(Workflow3()).showPlaylist())</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string></string>
+				<string>--change-mode</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>36A8C05C-3C0B-4ADD-AE0B-9125A25F3441</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>DD25762D-DC18-4930-AAA6-83101EBF3857</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -295,14 +459,14 @@ sys.exit(Controller(Workflow3()).showPlaylist())</string>
 			<key>xpos</key>
 			<integer>570</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>450</integer>
 		</dict>
 		<key>67D1E431-D28E-4F69-B9F3-1980D62241E3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>570</integer>
 			<key>ypos</key>
-			<integer>70</integer>
+			<integer>100</integer>
 		</dict>
 		<key>A13AC33F-B97F-4127-834A-EC54CD7EDC4A</key>
 		<dict>
@@ -314,16 +478,23 @@ sys.exit(Controller(Workflow3()).showPlaylist())</string>
 		<key>B292DF89-5BB2-408F-8F12-646E5D433D57</key>
 		<dict>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>890</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>420</integer>
 		</dict>
 		<key>C03FBFE8-AD80-4EC9-AB0E-C3FA473FF7D5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>900</integer>
+			<integer>1080</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>70</integer>
+		</dict>
+		<key>CA0976F8-D2A2-4F24-BA2E-64DFC8CB1BF6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>290</integer>
 		</dict>
 		<key>D53B1166-1E78-4DC8-9B9A-F7EC9088C477</key>
 		<dict>
@@ -331,6 +502,27 @@ sys.exit(Controller(Workflow3()).showPlaylist())</string>
 			<integer>330</integer>
 			<key>ypos</key>
 			<integer>170</integer>
+		</dict>
+		<key>DD25762D-DC18-4930-AAA6-83101EBF3857</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
+		<key>E454C501-1951-45EE-BB39-F13A6625E439</key>
+		<dict>
+			<key>xpos</key>
+			<integer>730</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>EB6F4AFF-FD4F-4FB6-8BD9-88B460FC953F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>890</integer>
+			<key>ypos</key>
+			<integer>260</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
