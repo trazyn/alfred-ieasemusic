@@ -52,6 +52,21 @@ class Controller:
                 )
         )
 
+    def __isMatched(self, item, keywords):
+        matchTitlte = pinyin.get(
+            item['name'],
+            format='strip',
+            delimiter=''
+        ).lower().find(keywords) != -1
+
+        matchArtists = pinyin.get(
+            self.__formatArtists(item['artists']),
+            format='strip',
+            delimiter=''
+        ).lower().find(keywords) != -1
+
+        return matchTitlte or matchArtists
+
     def __getStatus(self):
         s = socket.socket(socket.AF_UNIX)
 
@@ -134,11 +149,7 @@ class Controller:
         playlist = status['playlist']
         filtered = [
             i for i in playlist
-            if pinyin.get(
-                i['name'],
-                format='strip',
-                delimiter=''
-            ).lower().find(query) != -1
+            if self.__isMatched(i, query)
         ]
 
         return map(
