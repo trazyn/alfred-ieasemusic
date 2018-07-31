@@ -3,7 +3,9 @@
 
 import sys
 import socket
+import urllib
 import json
+import tempfile
 import pinyin
 from workflow import Workflow3
 
@@ -31,6 +33,7 @@ class Controller:
     def __init__(self, wf):
         global status
         self.wf = wf
+
         try:
             status = self.__getStatus()
         except Exception:
@@ -41,16 +44,37 @@ class Controller:
             wf.send_feedback()
             sys.exit(0)
 
+    def __addImageToCache(self, id, image):
+        return self.wf.cache_data(id, image)
+
+    def __getImageFromCache(self, id):
+        image = self.wf.cached_data(id, max_age=60 * 60)
+        return image
+
     def __formatArtists(self, artists):
         artists = artists.values() if not isinstance(
             artists, list) else artists
 
         return '/'.join(
-                map(
-                    lambda v: v['name'],
-                    iter(artists)
-                )
+            map(
+                lambda v: v['name'],
+                iter(artists)
+            )
         )
+
+    def __getImage(self, item):
+        key = item['id']
+        cached = self.__getImageFromCache(key)
+
+        if cached:
+            return cached
+
+        filename = tempfile.mktemp()
+        image = urllib.URLopener()
+        image.retrieve(item['album']['cover'], filename)
+        self.__addImageToCache(key, filename)
+
+        return filename
 
     def __isMatched(self, item, keywords):
         matchTitlte = pinyin.get(
@@ -146,11 +170,16 @@ class Controller:
         ]
 
     def getPlaylist(self, query):
+        images = {}
         playlist = status['playlist']
         filtered = [
             i for i in playlist
             if self.__isMatched(i, query)
         ]
+
+        # Get all images
+        for kv in filtered:
+            images[kv['id']] = self.__getImage(kv)
 
         return map(
             lambda v: (
@@ -159,7 +188,7 @@ class Controller:
                     'subtitle': self.__formatArtists(v['artists']),
                     'arg': json.dumps({'command': 'play', 'id': v['id']}),
                     'valid': True,
-                    'icon': './images/lollipop.png'
+                    'icon': images[v['id']]
                 }
             ),
             filtered
@@ -168,6 +197,7 @@ class Controller:
     def showPlaylist(self):
         query = self.__getQuery()
         res = self.getPlaylist(query)
+
         self.__out(res)
 
     def showMenu(self):
