@@ -34,7 +34,7 @@
 Last version: [v1.0.0](https://github.com/trazyn/alfred-ieasemusic/releases/latest)
 
 1. Downlaod [alfred-ieasemusic.alfredworkflow](https://github.com/trazyn/alfred-ieasemusic/releases/latest).
-2. Open `alfred-ieasemusic.alfredworkflow` in the Fidner, double-clicking it or drag to into Alfred.
+2. Open `alfred-ieasemusic.alfredworkflow` in the Finder, double-clicking it or drag to into Alfred.
 3. Double-click the first thingy marked `Hotkey`.
 4. Click the textfiled labeled `Hotkey` and press `⌥⌘.`(Any hotkeys as you wish).
   ![Hotkeys](https://github.com/trazyn/alfred-ieasemusic/blob/master/screenshots/hotkeys.png?raw=true)
